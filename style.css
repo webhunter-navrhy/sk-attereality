@@ -1,0 +1,72 @@
+:root{--y:#FED200;--n:#153965;--k:#1b1b1b;--g:#f4f4f4;--l:#dce0e0}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.6 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--k);background:#fff}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.12;letter-spacing:-.01em}
+a{color:inherit}
+.w{max-width:1180px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--l)}
+header .w{display:flex;align-items:center;gap:32px;height:76px}
+header img{height:56px;width:56px;display:block}
+nav{display:flex;gap:26px;margin-left:auto;font-size:15px}
+nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--y)}
+.btn{display:inline-block;background:var(--y);color:var(--k);padding:14px 26px;text-decoration:none;font-weight:600;border-radius:3px}
+.btn:hover{background:#e6bd00}
+.btn.o{background:none;border:2px solid var(--n);color:var(--n)}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;min-height:640px}
+.hero .t{padding:96px 48px 80px max(24px,calc((100vw - 1180px)/2 + 24px));display:flex;flex-direction:column;justify-content:center;gap:26px}
+.hero small{color:var(--n);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
+.hero h1{font-size:clamp(2.4rem,5vw,4.2rem);color:var(--n)}
+.hero h1 b{font-weight:400;box-shadow:inset 0 -.32em 0 var(--y)}
+.hero p{max-width:34em;font-size:1.1rem}
+.hero .b{display:flex;gap:14px;flex-wrap:wrap}
+.hero .i{background:url(img/dom.jpg) center/cover}
+section{padding:clamp(4rem,9vw,7.5rem) 0}
+h2{font-size:clamp(1.9rem,3.6vw,2.9rem);color:var(--n);margin-bottom:18px}
+.lead{max-width:40em;margin-bottom:44px;color:#444}
+.ocen{background:var(--n);color:#fff}
+.ocen h2{color:#fff}
+.ocen .w{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
+.ocen p{margin-bottom:24px;max-width:32em}
+.form{background:#fff;color:var(--k);padding:28px;border-radius:4px;display:grid;gap:12px}
+.form input,.form textarea{font:inherit;padding:12px;border:1px solid #bbb;border-radius:3px;width:100%}
+.form button{font:inherit;font-weight:600;background:var(--y);border:0;padding:14px;border-radius:3px;cursor:pointer}
+.form em{font-size:13px;color:#666}
+.ponuka{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{border:1px solid var(--l);display:flex;flex-direction:column}
+.card .p{aspect-ratio:3/2;background:var(--g) center/cover;position:relative}
+.card .p span{position:absolute;left:12px;top:12px;background:var(--y);font-size:12px;font-weight:700;padding:3px 9px;letter-spacing:.05em;text-transform:uppercase}
+.card div.c{padding:20px;display:grid;gap:6px}
+.card strong{font-family:Georgia,serif;font-size:1.5rem;color:var(--n);font-weight:400}
+.card small{color:#666}
+.sluzby{background:var(--g)}
+.sl{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--l);border:1px solid var(--l)}
+.sl div{background:#fff;padding:26px 22px;border-top:4px solid var(--y)}
+.sl h3{font-size:1.25rem;color:var(--n);margin-bottom:8px}
+.sl p{font-size:15px;color:#444}
+.projekt{display:grid;grid-template-columns:1fr 1fr;min-height:420px;padding:0}
+.projekt .i{background:url(img/hala.jpg) center/cover}
+.projekt .t{padding:72px max(24px,calc((100vw - 1180px)/2 + 24px)) 72px 56px;display:flex;flex-direction:column;justify-content:center;gap:18px;background:var(--y)}
+.projekt h2{color:var(--k)}
+.projekt .btn{background:var(--k);color:#fff;align-self:flex-start}
+.tim{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.tim img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.kont{background:var(--g)}
+.kont .w{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.kont dl{display:grid;gap:14px}
+.kont dt{font-weight:700;color:var(--n)}
+footer{background:var(--k);color:#bbb;padding:28px 0;font-size:14px}
+footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){
+nav{display:none}
+.hero,.projekt,.ocen .w,.tim,.kont .w{grid-template-columns:1fr}
+.hero .i{min-height:280px;order:-1}
+.hero .t{padding:48px 24px}
+.ponuka{grid-template-columns:1fr}
+.sl{grid-template-columns:1fr 1fr}
+.projekt .t{padding:48px 24px}
+header .w{justify-content:space-between}
+header .btn{margin-left:auto;padding:10px 16px;font-size:14px}
+}
+@media(max-width:520px){.sl{grid-template-columns:1fr}}
